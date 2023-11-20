@@ -5,6 +5,8 @@ import HomePage from './components/HomePage'
 import Navbar from './components/Navbar'
 import Recipedetails from './components/RecipeDetails'
 
+
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -14,7 +16,7 @@ function App() {
     <br/>
     <Routes>
       <Route path="/" element={<HomePage/>}/>
-      <Route path="/recipe/:id" element={<Recipedetails/>}/>
+     
     </Routes>
       
     </>
