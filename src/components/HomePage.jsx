@@ -12,7 +12,7 @@ function HomePage(){
       .get(API_URL + "/recipe")
       .then((response) => {
         setRecipe(response.data);
-        console.log(recipe);
+
       })
       .catch((error) => {
         console.log("Error getting recipe from the API...");
@@ -36,7 +36,7 @@ function HomePage(){
               <br />
               <h2>{rcp.name} </h2>
               <br />
-              <h3>{rcp.cuisin}</h3>
+              <h3>{rcp.cuisine}</h3>
               <br/>
               <Link to={`/recipe/${rcp.id}`}>
             <button className="btn">Recipe Details</button>

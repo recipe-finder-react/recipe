@@ -9,14 +9,17 @@
   font-family: sans-serif;
   text-align: center;
   margin-right: auto;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 100px;
   background:rgb(5, 4, 2) ;
+
   
 }
+
+
 
 .Navbar a {
   padding: 0 1rem;
@@ -34,7 +37,7 @@
   font-family: arial;
   width: 85%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding-left: 30px;
 }
 .img{

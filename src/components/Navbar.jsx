@@ -4,8 +4,6 @@ function Navbar(){
     
           <nav className="Navbar">
             <NavLink to="/">HomePage</NavLink>
-            <NavLink to="/recipe/:id">Recipe</NavLink>
-            
         </nav>
         
     )
