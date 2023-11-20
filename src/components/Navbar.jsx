@@ -4,7 +4,7 @@ function Navbar(){
     
           <nav className="Navbar">
             <NavLink to="/">HomePage</NavLink>
-            <Navbar to ="/addRecipe">Add Recipe</Navbar>
+            <NavLink to ="/addRecipe">Add Recipe</NavLink>
         </nav>
         
     )
