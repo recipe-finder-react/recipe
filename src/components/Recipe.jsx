@@ -28,17 +28,17 @@ function Recipe (){
        <div>
         {recep && (
             <>
-            <img src={recep.image}/>
+            <img className="recipeImage"src={recep.image}/>
             <br/>
-            <h1>{recep.name}</h1>
+            <h1 className="center">{recep.name}</h1>
             <br/>
-            <h2>{recep.cuisine}</h2>
+            <h2 className="center">{recep.cuisine}</h2>
             <br/>
-            <ul>
+            <ul className="center">
             <li> {recep.ingredients}</li>
             </ul>
             <br/>
-            <p>{recep.instructions}</p>
+            <p className="center">{recep.instructions}</p>
 
             </>
         )}
