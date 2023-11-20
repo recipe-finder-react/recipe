@@ -4,6 +4,7 @@ function Navbar(){
     
           <nav className="Navbar">
             <NavLink to="/">HomePage</NavLink>
+            <Navbar to ="/addRecipe">Add Recipe</Navbar>
         </nav>
         
     )

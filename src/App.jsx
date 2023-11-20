@@ -4,6 +4,7 @@ import { Routes,Route } from 'react-router-dom'
 import HomePage from './components/HomePage'
 import Navbar from './components/Navbar'
 import Recipe from './components/Recipe'
+import AddRecipe from './components/AddRecipe'
 
 
 
@@ -17,6 +18,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />}/>
       <Route path = "/recipe/:recepid" element={<Recipe/>}/>
+      <Route path= "/addRecipe" element={<AddRecipe/>}/>
     
     </Routes>
       
