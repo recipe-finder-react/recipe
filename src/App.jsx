@@ -3,7 +3,9 @@ import './App.css'
 import { Routes,Route } from 'react-router-dom'
 import HomePage from './components/HomePage'
 import Navbar from './components/Navbar'
-import Recipedetails from './components/RecipeDetails'
+import Recipe from './components/Recipe'
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,8 +15,9 @@ function App() {
     <Navbar/>
     <br/>
     <Routes>
-      <Route path="/" element={<HomePage/>}/>
-      <Route path="/recipe/:id" element={<Recipedetails/>}/>
+      <Route path="/" element={<HomePage />}/>
+      <Route path = "/recipe/:recepid" element={<Recipe/>}/>
+    
     </Routes>
       
     </>
