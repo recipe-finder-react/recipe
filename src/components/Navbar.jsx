@@ -3,7 +3,7 @@ function Navbar(){
     return(
     
           <nav className="Navbar">
-            <NavLink to="/">HomePage</NavLink>
+            <NavLink to="/"><em>HomePage</em></NavLink>
             <NavLink to ="/addRecipe">Add Recipe</NavLink>
         </nav>
         

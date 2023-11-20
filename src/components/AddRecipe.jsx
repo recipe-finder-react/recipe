@@ -12,6 +12,7 @@ function AddRecipe() {
     const[instructions, setInstructions]=useState('')
 
     const navigate = useNavigate()
+
     const handleSubmit= (e)=>{
         e.preventDefault()
         const requestBody={
@@ -22,8 +23,8 @@ function AddRecipe() {
             instructions: instructions,
         }
         axios 
-        .post(`${API_URL}/addRecipe`, requestBody)
-        .then((rep)=>{
+        .post(`${API_URL}/recipe`, requestBody)
+        .then(()=>{
             navigate("/addRecipe")
         })
         .catch((error)=>console.log(error))
