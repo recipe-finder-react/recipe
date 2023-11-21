@@ -113,3 +113,31 @@ body{
 .center{
   text-align: center;
 }
+
+
+
+.input{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background: #ad9406;
+  border-radius: 4px;
+  padding: 4px;
+}
+.input:focus{
+  background: #FF7E31;
+  
+}
+.addBtn{
+  height: 30px;
+  margin-left: 700px;
+  margin-top: 5px;
+  width:80px;
+  background: #E62C03;
+}
+#i{
+  height: 300px;
+  width: 700px;
+  margin-left: 400px;
+}

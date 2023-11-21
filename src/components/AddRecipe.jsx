@@ -34,43 +34,45 @@ function AddRecipe() {
         <h1>Add Reciepe</h1>
         <br/>
         <form onSubmit={handleSubmit}>
-             <label>Name:</label>
-            <input
+             <label>Name:
+            <input className="input"
                 type="text"
                 name="Name"
                 value={name}
                 onChange={(e) =>setName(e.target.value)}
-                />
+                /></label><br/>
 
-                  <label>Cuisine:</label>
-                <input
+                  <label>Cuisine:
+                <input className="input"
                 type="text"
                 name="Cuisine"
                 value={cuisine}
                 onChange={(e) =>setCuisine(e.target.value)}
-                />
-                    <label>Image:</label>
-                <input
+                /> </label><br/>
+                    <label>Image:
+                <input className="input"
                 type="url"
                 name="Image"
                 value={image}
                 onChange={(e) =>setImage(e.target.value)}
-                />
-                    <label>Ingredients:</label>
-                <input 
+                /></label><br/>
+                    <label>Ingredients:
+                <input className="input"
                 type="text"
                 name="Ingredients"
                 value={ingredients}
                 onChange={(e) =>setIngredients(e.target.value)}    
-                />
-                    <label>Instructions:</label>
-                <input
+                /></label><br/>
+                    <label>Instructions:
+                <input className="input"
                 type="text"
                 name="Instructions"
                 value={instructions}
                 onChange={(e) =>setInstructions(e.target.value)} 
-                />
-                <button type="submit">Submit</button>   
+                /></label> <br/>
+                <button className="addBtn" type="submit">Add</button>   
+                <br/>
+                <img id="i"src="https://cdn4.vectorstock.com/i/1000x1000/71/88/cartoon-chef-cloche-pointing-at-menu-board-vector-6587188.jpg"/>
         </form>
       
     </div>
