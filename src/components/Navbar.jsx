@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
-    <nav className="Navbar">
+    <nav className="nav">
       <NavLink to="/">
-        <em>HomePage</em>
+        <img className="logo"  src="./src/assets/Logo.png"/>
       </NavLink>
-      <NavLink to="/addRecipe">Add Recipe</NavLink>
+     
     </nav>
   );
 }

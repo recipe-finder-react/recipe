@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import SearchBar from "./SearchBar";
+
+
 const API_URL = "https://yassine-backend-test1.adaptable.app";
 
 function HomePage() {
@@ -41,22 +43,25 @@ function HomePage() {
   return (
     <>
       <SearchBar setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
-      <div className="card">
+     
+      <div id="container">
         {filtered.map((rcp, k) => {
           return (
-            <ul className="ulhome" key={k}>
-              <li className="lihome">
-                <img className="img" src={rcp.image} />
-                <br />
-                <h2>{rcp.name} </h2>
-                <br />
-                <h3>{rcp.cuisine}</h3>
+          
+            <div className="card" key={k}>
+              <img className="img" src={rcp.image} />
+              <br/>
+              <div className="card__details">
+                <h2 >{rcp.name} </h2>
+                <br/>
+                <span className="tag" >{rcp.cuisine}</span>
                 <br />
                 <Link to={`/recipe/${rcp.id}`}>
                   <button className="btn">Recipe Details</button>
                 </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
+           
           );
         })}
       </div>
