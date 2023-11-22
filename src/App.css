@@ -48,21 +48,20 @@
   padding-left: 30px;
   grid-gap: 20px;
   
-  
-  
 
 }
 .img{
   width: 300px;
   border-radius: 27px;
 }
-ul {
+.ulhome {
   list-style: none;
+  
 }
 
-li {
+.lihome {
   display: inline-block;
-  margin-right: 100px; /* add spacing between items */
+   margin-right: 100px; /* add spacing between items */
 }
 .btn{
   background-color: initial;
@@ -102,7 +101,7 @@ li {
 
 
 body{
-  background-color: rgb(241, 226, 17);
+  background-color: rgb(253, 253, 253);
 }
 
 .recipeImage{
