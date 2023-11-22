@@ -5,9 +5,8 @@ function Navbar() {
   return (
     <nav className="nav">
       <NavLink to="/">
-        <img className="logo"  src="./src/assets/Logo.png"/>
+        <img className="logo" src="./src/assets/Logo.png" />
       </NavLink>
-     
     </nav>
   );
 }

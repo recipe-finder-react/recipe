@@ -25,21 +25,34 @@ function Recipe() {
     <div>
       {recep && (
         <>
-          <img className="recipeImage" src={recep.image} />
-          <br />
-          <h1 className="center">{recep.name}</h1>
-          <br />
-          <h2 className="center">{recep.cuisine}</h2>
-          <br />
-          <ul className="center">
-            <li> {recep.ingredients}</li>
-          </ul>
-          <br />
-          <p className="center">{recep.instructions}</p>
-          <br />
-          <Link to={`/recipe/edit/${recep.id}`}>
-            <button className="btn">Edit recipe</button>
-          </Link>
+          <div className="recipediv">
+            <img className="recipeImage" src={recep.image} />
+            <br />
+            <div className="divnamdetail">
+              <h1 className="recepname">{recep.name}</h1>
+              <br />
+              <h2 className="center">Cuisine : {recep.cuisine}</h2>
+              <br />
+              <span>
+                {" "}
+                <h2>Ingredients :</h2>
+                {recep.ingredients}
+              </span>
+
+              <br />
+              <p className="par">
+                {" "}
+                <h2>Instructions :</h2>
+                {recep.instructions}
+              </p>
+            </div>
+            <br />
+            <div className="btnrecipe">
+            <Link to={`/recipe/edit/${recep.id}`}>
+              <button className="btn">Edit recipe</button>
+            </Link>
+          </div>
+          </div>
         </>
       )}
     </div>
