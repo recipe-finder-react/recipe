@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import SearchBar from "./SearchBar";
+
 const API_URL = "https://yassine-backend-test1.adaptable.app";
 
 function HomePage() {
@@ -14,14 +15,14 @@ function HomePage() {
       .get(API_URL + "/recipe")
       .then((response) => {
         setRecipe(response.data);
-        setFiltered(response.data)
+        setFiltered(response.data);
       })
       .catch((error) => {
         console.log("Error getting recipe from the API...");
         console.log(error);
       });
   };
-  
+
   useEffect(() => {
     searchTerm
       ? setFiltered(
@@ -30,8 +31,6 @@ function HomePage() {
           )
         )
       : setFiltered(recipe);
-
-  
   }, [searchTerm]);
 
   useEffect(() => {
@@ -41,22 +40,25 @@ function HomePage() {
   return (
     <>
       <SearchBar setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
-      <div className="card">
+
+      <div id="container">
         {filtered.map((rcp, k) => {
           return (
-            <ul className="ulhome" key={k}>
-              <li className="lihome">
-                <img className="img" src={rcp.image} />
-                <br />
+            <div className="card" key={k}>
+              <img className="img" src={rcp.image} />
+              <br />
+              <div className="card__details">
                 <h2>{rcp.name} </h2>
                 <br />
-                <h3>{rcp.cuisine}</h3>
+                <span className="tag">{rcp.cuisine}</span>
                 <br />
-                <Link to={`/recipe/${rcp.id}`}>
-                  <button className="btn">Recipe Details</button>
-                </Link>
-              </li>
-            </ul>
+                <div className="btnhome">
+                  <Link to={`/recipe/${rcp.id}`}>
+                    <button className="btn">Recipe Details</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           );
         })}
       </div>
