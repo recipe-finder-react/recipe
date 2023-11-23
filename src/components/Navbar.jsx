@@ -8,6 +8,7 @@ function Navbar() {
       <NavLink to="/">
         <img className="logo" src={Logo} />
       </NavLink>
+     
     </nav>
   );
 }
