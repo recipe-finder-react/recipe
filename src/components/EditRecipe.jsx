@@ -58,8 +58,11 @@ function EditRecipe() {
 
   return (
     <div>
-      <h1>Edit Recipe</h1>
+      <h1 className="h1add">Edit Recipe</h1>
       <br />
+      <div className="container">
+      <div className="cont-box">
+      <div className="left">
 
       <form onSubmit={handleSubmit}>
         <label>
@@ -97,7 +100,7 @@ function EditRecipe() {
         <br />
         <label>
           Ingredients:
-          <input
+          <textarea
             className="input"
             type="text"
             name="Ingredients"
@@ -108,7 +111,7 @@ function EditRecipe() {
         <br />
         <label>
           Instructions:
-          <input
+          <textarea
             className="input"
             type="text"
             name="Instructions"
@@ -116,13 +119,15 @@ function EditRecipe() {
             onChange={(e) => setInstruction(e.target.value)}
           />
         </label>{" "}
-        <br />
-        <button className="addBtn" type="submit">
-          Edit
-        </button>
-        <br />
-        <button onClick={deletRecipe}>Delete Recipe</button>
+       
       </form>
+      </div>
+      </div>
+      </div>
+      <div className="editbtn">
+        <button className="btn" type="submit">Edit </button>
+        <button className="btn" onClick={deletRecipe}>Delete Recipe</button>
+        </div>
     </div>
   );
 }

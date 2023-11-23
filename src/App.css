@@ -10,7 +10,10 @@ body {
 .nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .logo {
   width: 150px;
@@ -68,7 +71,7 @@ body {
   border-radius: 18px;
   overflow: hidden;
   border: 2px solid black;
-  width: 25%;
+  width: 30%;
 }
 .search-box .form-control {
   width: 100%;
@@ -142,28 +145,60 @@ body {
 .btnrecipe{
   padding-top: 90px;
 }
+.btnsr{
+  margin-right: 38px;
+}
 
-.input {
+/* add recipe*/
+.h1add{
+  display: flex;
+  justify-content: center;
+}
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 30px;
-  outline: none;
-  border: none;
-  background: #ad9406;
-  border-radius: 4px;
-  padding: 4px;
+  height: 100%;
+  padding: 20px 100px;
 }
-.input:focus {
-  background: #ff7e31;
+.container:after{
+content:'';
+position: absolute;
+left:0;
+top:0;
+width: 100%;
+height: 100%;
+background: url(https://media.istockphoto.com/id/603906484/es/foto/ensalada-de-vegetales.jpg?s=2048x2048&w=is&k=20&c=omavwe1hPhnU9wOMO-m-32yxzr7MlafppKI8nheknx8=) no-repeat center;
+background-size: cover;
+z-index: -1;
+filter:blur(50px);
 }
-.addBtn {
-  height: 30px;
-  margin-left: 700px;
-  margin-top: 5px;
-  width: 80px;
-  background: #e62c03;
+.cont-box{
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 23%;
+  
+ 
 }
-#i {
-  height: 300px;
-  width: 700px;
-  margin-left: 400px;
+.input{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #aebab7;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  transition: .3s;
 }
+.btnadd{
+  margin-right: 19%;
+}
+.editbtn{
+ display: flex;
+justify-content: center;
+}
+

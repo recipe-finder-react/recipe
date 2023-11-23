@@ -30,11 +30,15 @@ function AddRecipe() {
       .catch((error) => console.log(error));
   };
   return (
-    <div>
-      <h1>Add Reciepe</h1>
+    <>
+    <h1 className="h1add">Add Reciepe</h1>
+    <div className="container">
+      <div className="cont-box">
+      <div className="left">
       <br />
+      <div className="right">
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className="nams" >
           Name:
           <input
             className="input"
@@ -45,7 +49,7 @@ function AddRecipe() {
           />
         </label>
         <br />
-        <label>
+        <label className="nams">
           Cuisine:
           <input
             className="input"
@@ -54,9 +58,9 @@ function AddRecipe() {
             value={cuisine}
             onChange={(e) => setCuisine(e.target.value)}
           />{" "}
-        </label>
+        </label >
         <br />
-        <label>
+        <label className="nams">
           Image:
           <input
             className="input"
@@ -67,10 +71,11 @@ function AddRecipe() {
           />
         </label>
         <br />
-        <label>
+        <label className="nams">
           Ingredients:
-          <input
-            className="input"
+          <textarea
+          className="input"
+          rows="6"
             type="text"
             name="Ingredients"
             value={ingredients}
@@ -78,23 +83,32 @@ function AddRecipe() {
           />
         </label>
         <br />
-        <label>
+        <div>
+        <label className="nams">
           Instructions:
-          <input
-            className="input"
+          <textarea
+          className="input"
+            rows="6"
             type="text"
             name="Instructions"
             value={instructions}
             onChange={(e) => setInstructions(e.target.value)}
           />
-        </label>{" "}
+        </label></div>
+        
         <br />
-        <button className="addBtn" type="submit">
+        <div className="btnadd">
+        <button className="btn" type="submit">
           Add
         </button>
+        </div>
         <br />
       </form>
+      </div>
+      </div>
+      </div>
     </div>
+    </>
   );
 }
 

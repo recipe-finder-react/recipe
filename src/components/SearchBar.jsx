@@ -17,10 +17,15 @@ function SearchBar({ setSearchTerm, searchTerm }) {
             value={searchTerm}
           />
         </div>
-        <div>
+        <div className="btnsr">
           <Link to="/addRecipe">
             <button className="btn">
               <strong>+ Add Recipe </strong>{" "}
+            </button>
+          </Link >
+          <Link to="/randomrecipe">
+          <button className="btn">
+              <strong>Get Random recipe </strong>{" "}
             </button>
           </Link>
         </div>
