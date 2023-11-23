@@ -31,83 +31,84 @@ function AddRecipe() {
   };
   return (
     <>
-    <h1 className="h1add">Add Reciepe</h1>
-    <div className="container">
-      <div className="cont-box">
-      <div className="left">
-      <br />
-      <div className="right">
-      <form onSubmit={handleSubmit}>
-        <label className="nams" >
-          Name:
-          <input
-            className="input"
-            type="text"
-            name="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
-        <br />
-        <label className="nams">
-          Cuisine:
-          <input
-            className="input"
-            type="text"
-            name="Cuisine"
-            value={cuisine}
-            onChange={(e) => setCuisine(e.target.value)}
-          />{" "}
-        </label >
-        <br />
-        <label className="nams">
-          Image:
-          <input
-            className="input"
-            type="url"
-            name="Image"
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
-          />
-        </label>
-        <br />
-        <label className="nams">
-          Ingredients:
-          <textarea
-          className="input"
-          rows="6"
-            type="text"
-            name="Ingredients"
-            value={ingredients}
-            onChange={(e) => setIngredients(e.target.value)}
-          />
-        </label>
-        <br />
-        <div>
-        <label className="nams">
-          Instructions:
-          <textarea
-          className="input"
-            rows="6"
-            type="text"
-            name="Instructions"
-            value={instructions}
-            onChange={(e) => setInstructions(e.target.value)}
-          />
-        </label></div>
-        
-        <br />
-        <div className="btnadd">
-        <button className="btn" type="submit">
-          Add
-        </button>
+      <h1 className="h1add">Add Reciepe</h1>
+      <div className="container">
+        <div className="cont-box">
+          <div className="left">
+            <br />
+            <div className="right">
+              <form onSubmit={handleSubmit}>
+                <label className="nams">
+                  Name:
+                  <input
+                    className="input"
+                    type="text"
+                    name="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </label>
+                <br />
+                <label className="nams">
+                  Cuisine:
+                  <input
+                    className="input"
+                    type="text"
+                    name="Cuisine"
+                    value={cuisine}
+                    onChange={(e) => setCuisine(e.target.value)}
+                  />{" "}
+                </label>
+                <br />
+                <label className="nams">
+                  Image:
+                  <input
+                    className="input"
+                    type="url"
+                    name="Image"
+                    value={image}
+                    onChange={(e) => setImage(e.target.value)}
+                  />
+                </label>
+                <br />
+                <label className="nams">
+                  Ingredients:
+                  <textarea
+                    className="input"
+                    rows="6"
+                    type="text"
+                    name="Ingredients"
+                    value={ingredients}
+                    onChange={(e) => setIngredients(e.target.value)}
+                  />
+                </label>
+                <br />
+                <div>
+                  <label className="nams">
+                    Instructions:
+                    <textarea
+                      className="input"
+                      rows="6"
+                      type="text"
+                      name="Instructions"
+                      value={instructions}
+                      onChange={(e) => setInstructions(e.target.value)}
+                    />
+                  </label>
+                </div>
+
+                <br />
+                <div className="btnadd">
+                  <button className="btn" type="submit">
+                    Add
+                  </button>
+                </div>
+                <br />
+              </form>
+            </div>
+          </div>
         </div>
-        <br />
-      </form>
       </div>
-      </div>
-      </div>
-    </div>
     </>
   );
 }

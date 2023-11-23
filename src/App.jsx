@@ -8,7 +8,6 @@ import AddRecipe from "./components/AddRecipe";
 import EditRecipe from "./components/EditRecipe";
 import RandomRecipe from "./components/RandomRecipe";
 
-
 function App() {
   const [count, setCount] = useState(0);
 
@@ -21,8 +20,7 @@ function App() {
         <Route path="/recipe/:recepid" element={<Recipe />} />
         <Route path="/addRecipe" element={<AddRecipe />} />
         <Route path="/recipe/edit/:recipid" element={<EditRecipe />} />
-        <Route path="/randomrecipe" element={<RandomRecipe/>} />
-       
+        <Route path="/randomrecipe" element={<RandomRecipe />} />
       </Routes>
     </>
   );

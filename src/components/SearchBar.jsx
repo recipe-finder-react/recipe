@@ -22,9 +22,9 @@ function SearchBar({ setSearchTerm, searchTerm }) {
             <button className="btn">
               <strong>+ Add Recipe </strong>{" "}
             </button>
-          </Link >
+          </Link>
           <Link to="/randomrecipe">
-          <button className="btn">
+            <button className="btn">
               <strong>Get Random recipe </strong>{" "}
             </button>
           </Link>

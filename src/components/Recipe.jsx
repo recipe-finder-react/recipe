@@ -48,10 +48,10 @@ function Recipe() {
             </div>
             <br />
             <div className="btnrecipe">
-            <Link to={`/recipe/edit/${recep.id}`}>
-              <button className="btn">Edit recipe</button>
-            </Link>
-          </div>
+              <Link to={`/recipe/edit/${recep.id}`}>
+                <button className="btn">Edit recipe</button>
+              </Link>
+            </div>
           </div>
         </>
       )}

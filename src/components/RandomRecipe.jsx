@@ -1,28 +1,28 @@
-import React from 'react'
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const API_URL = "https://yassine-backend-test1.adaptable.app";
 
 function RandomRecipe() {
-    const [randomRecipe, setRandomRecipe] = useState({})
-    useEffect(()=>{
-        axios.get(API_URL + "/recipe")
-        .then((reponse=>{
-            const recipArr = reponse.data.map((rece)=>rece.id)
-            const randomId = recipArr[Math.floor(Math.random() * recipArr.length)]
-            const newRece = reponse.data.find((rece) => rece.id === randomId)
-            setRandomRecipe(newRece)
-        }))
-        .catch((error)=> console.log(error))
-
-    },[])
+  const [randomRecipe, setRandomRecipe] = useState({});
+  useEffect(() => {
+    axios
+      .get(API_URL + "/recipe")
+      .then((reponse) => {
+        const recipArr = reponse.data.map((rece) => rece.id);
+        const randomId = recipArr[Math.floor(Math.random() * recipArr.length)];
+        const newRece = reponse.data.find((rece) => rece.id === randomId);
+        setRandomRecipe(newRece);
+      })
+      .catch((error) => console.log(error));
+  }, []);
   return (
     <div>
-      {randomRecipe &&(
-      <div>
-        <div className="recipediv">
+      {randomRecipe && (
+        <div>
+          <div className="recipediv">
             <img className="recipeImage" src={randomRecipe.image} />
             <br />
             <div className="divnamdetail">
@@ -45,21 +45,15 @@ function RandomRecipe() {
             </div>
             <br />
             <div className="btnrecipe">
-            <Link to={`/recipe/edit/${randomRecipe.id}`}>
-              <button className="btn">Edit recipe</button>
-            </Link>
-          </div>
-          </div>
+              <Link to={`/recipe/edit/${randomRecipe.id}`}>
+                <button className="btn">Edit recipe</button>
+              </Link>
             </div>
-      )
-
-      }
-
-
-
-
+          </div>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default RandomRecipe
+export default RandomRecipe;

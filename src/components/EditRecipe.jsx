@@ -61,73 +61,75 @@ function EditRecipe() {
       <h1 className="h1add">Edit Recipe</h1>
       <br />
       <div className="container">
-      <div className="cont-box">
-      <div className="left">
-
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            className="input"
-            type="text"
-            name="Name"
-            value={nam}
-            onChange={(e) => setNam(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Cuisine:
-          <input
-            className="input"
-            type="text"
-            name="Cuisine"
-            value={cuisin}
-            onChange={(e) => setCuisin(e.target.value)}
-          />{" "}
-        </label>
-        <br />
-        <label>
-          Image:
-          <input
-            className="input"
-            type="url"
-            name="Image"
-            value={imag}
-            onChange={(e) => setImag(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Ingredients:
-          <textarea
-            className="input"
-            type="text"
-            name="Ingredients"
-            value={ingredient}
-            onChange={(e) => setIngredient(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Instructions:
-          <textarea
-            className="input"
-            type="text"
-            name="Instructions"
-            value={instruction}
-            onChange={(e) => setInstruction(e.target.value)}
-          />
-        </label>{" "}
-       
-      </form>
-      </div>
-      </div>
+        <div className="cont-box">
+          <div className="left">
+            <form onSubmit={handleSubmit}>
+              <label>
+                Name:
+                <input
+                  className="input"
+                  type="text"
+                  name="Name"
+                  value={nam}
+                  onChange={(e) => setNam(e.target.value)}
+                />
+              </label>
+              <br />
+              <label>
+                Cuisine:
+                <input
+                  className="input"
+                  type="text"
+                  name="Cuisine"
+                  value={cuisin}
+                  onChange={(e) => setCuisin(e.target.value)}
+                />{" "}
+              </label>
+              <br />
+              <label>
+                Image:
+                <input
+                  className="input"
+                  type="url"
+                  name="Image"
+                  value={imag}
+                  onChange={(e) => setImag(e.target.value)}
+                />
+              </label>
+              <br />
+              <label>
+                Ingredients:
+                <textarea
+                  className="input"
+                  type="text"
+                  name="Ingredients"
+                  value={ingredient}
+                  onChange={(e) => setIngredient(e.target.value)}
+                />
+              </label>
+              <br />
+              <label>
+                Instructions:
+                <textarea
+                  className="input"
+                  type="text"
+                  name="Instructions"
+                  value={instruction}
+                  onChange={(e) => setInstruction(e.target.value)}
+                />
+              </label>{" "}
+            </form>
+          </div>
+        </div>
       </div>
       <div className="editbtn">
-        <button className="btn" type="submit">Edit </button>
-        <button className="btn" onClick={deletRecipe}>Delete Recipe</button>
-        </div>
+        <button className="btn" type="submit">
+          Edit{" "}
+        </button>
+        <button className="btn" onClick={deletRecipe}>
+          Delete Recipe
+        </button>
+      </div>
     </div>
   );
 }
