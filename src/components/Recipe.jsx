@@ -48,9 +48,13 @@ function Recipe() {
             </div>
             <br />
             <div className="btnrecipe">
+            <Link to={'/'} >
+                <button className="btn">Home Page</button>
+              </Link>
               <Link to={`/recipe/edit/${recep.id}`}>
                 <button className="btn">Edit recipe</button>
               </Link>
+             
             </div>
           </div>
         </>

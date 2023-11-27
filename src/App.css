@@ -29,6 +29,8 @@ body {
 .card {
   display: inline-flex;
   flex-wrap: wrap;
+  justify-content: start;
+  align-items: stretch;
   gap: 1em;
   background-color: #daad86;
   border: 1px solid #bacdd8;
@@ -45,6 +47,7 @@ body {
   font-size: 17px;
   font-weight: 600;
   color: #788697;
+ 
 }
 .img {
   width: 100%;
@@ -55,13 +58,14 @@ body {
 .btnhome {
   display: flex;
   justify-content: center;
-  align-items: center;
+  
 }
 .ser {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .search-box {
@@ -197,7 +201,20 @@ body {
 .btnadd {
   margin-right: 19%;
 }
-.editbtn {
+.btnedit {
+  display: flex;
+  justify-content: center;
+}
+.form{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 100px;
+}
+.h1edit{
   display: flex;
   justify-content: center;
 }
