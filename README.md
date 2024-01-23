@@ -9,76 +9,77 @@ Currently, two official plugins are available:
 
 
 
-<h1 align='center'>🍽️ Recipe Finder</h1>
+<div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+            <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-indigo-600 lg:max-w-xl">
+                <h1 className="text-3xl font-semibold text-center text-indigo-700 underline uppercase decoration-wavy">
+                    Sign UP
+                </h1>
+                <form onSubmit={handleSubmit} className="mt-6">
+                    <div className="mb-2">
+                        <label
+                            for="name"
+                            className="block text-sm font-semibold text-gray-800"
+                        >
+                            Name
+                        </label>
+                        <input
+                            type="email"
+                            className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-2">
+                        <label
+                            for="email"
+                            className="block text-sm font-semibold text-gray-800"
+                        >
+                            Lastname
+                        </label>
+                        <input
+                            type="email"
+                            className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                    </div>
+                    <div className="mb-2">
+                        <label
+                            for="email"
+                            className="block text-sm font-semibold text-gray-800"
+                        >
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                    </div>
+                    <div className="mb-2">
+                        <label
+                            for="password"
+                            className="block text-sm font-semibold text-gray-800"
+                        >
+                            Password
+                        </label>
+                        <input
+                            type="password"
+                            className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                    </div>
+                    <div className="mt-6">
+                        <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-indigo-700 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">
+                            Login
+                        </button>
+                    </div>
+                </form>
 
-## About
-Recipe Finder is a recipe search engine that lets you search by ingredients you have at home. Find thousands of recipes you can make right now.
-
-## Features
-Recipe Finder helps you to find recipes of delicious foods with `Ingridients` also you can `See More` about particular recipe by just one click on see more recipe button.
-
->_This application is hosted on Netlify._
-
-## Built With
-| React JS |
-| --- |
-
-
-
-
-
-## Link
-```
-https://project-recipe-finder.netlify.app/
-```
-
----
-<p align='center'>Hope you like this React Application 😊</p>
-
----
-
-
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm install`
-
-### `npm run dev`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.
-
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-
-
-.
-
-.
-
-
-
-
-
-
-
-
-
-
-
+                <p className="mt-8 text-xs font-light text-center text-gray-700">
+                    {" "}
+                    Already have an account?{" "}
+                    <a
+                        href="#"
+                        className="font-medium text-indigo-600 hover:underline"
+                    >
+                        Sign in
+                    </a>
+                </p>
+            </div>
+        </div>
