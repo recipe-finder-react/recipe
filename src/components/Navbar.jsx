@@ -62,16 +62,16 @@ function Navbar() {
             >
                 <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                     <li className="text-gray-800 text-md font-bold hover:text-blue-600">
-                        < a href='/' >Home</a>
+                        < Link to={'/'} >Home</Link>
                     </li>
                     <li className="text-gray-800 text-md font-bold hover:text-blue-600">
-                        <a href="/all">All recipe</a>
+                        <Link to={"/all"}>All recipe</Link>
                     </li>
                     <li className="text-gray-800 text-md font-bold hover:text-blue-600">
-                        <a href="/randomrecipe" >Random Recipe</a>
+                        <Link to={"/randomrecipe"} >Random Recipe</Link>
                     </li>
                     <li className="text-gray-800 text-md font-bold hover:text-blue-600">
-                        <a href="/addRecipe" >Add Recipe</a>
+                        <Link to={"/addRecipe"} >Add Recipe</Link>
                     </li>
                     
                 </ul>
