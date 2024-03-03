@@ -4,7 +4,7 @@ import axios from "axios";
 import Filter from "./Filter";
 import SearchBar from "./SearchBar";
 import Pagination from "./Paginaion";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Loading from "./Loading";
 import {
   Card,
@@ -59,7 +59,7 @@ function HomePage() {
   if (loading) {
     return (
       <div className="d-flex items-center justify-center">
-      <Spinner className="d-flex items-center justify-center h-16 w-16 text-gray-900/50" />
+        <Spinner className="d-flex items-center justify-center h-16 w-16 text-gray-900/50" />
       </div>
     );
   }
@@ -81,7 +81,7 @@ function HomePage() {
         searchTerm={searchTerm}
       />
 
-      <div >
+      <div>
         <Filter
           recipe={recipe}
           setFiltered={setFiltered}
@@ -90,53 +90,56 @@ function HomePage() {
         />
         <motion.div
           layout
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
           className="group mt-8 justify-center inline-flex flex-wrap items-center gap-5 "
         >
-          {currentPosts.map((rcp, k) => {
-            return (
-              
-              <Card className=" w-full max-w-[25rem] max-h-[30rem] rounded-3xl shadow-xl transition duration-500 hover:scale-105">
-                <CardHeader floated={false} color="blue-gray">
-                  <div className="w-full h-56 bg-gray-200 rounded-md overflow-hidden bject-cover hover:opacity-75 lg:h-72 xl:h-80">
-                    <Link to={`/recipe/${rcp.id}`}>
-                      <img
-                        src={rcp.image}
-                        alt="Image not found"
-                        className="mb-3 w-full h-full object-center object-cover"
-                      />
-                    </Link>
-                  </div>
-                </CardHeader>
-                <CardBody>
-                  <div className=" flex items-center justify-between">
-                    <Typography
-                      variant="h5"
-                      color="blue-gray"
-                      className="font-medium"
-                    >
-                      {rcp.name}
+          <AnimatePresence>
+            {currentPosts.map((rcp, k) => {
+              return (
+                <Card className=" w-full max-w-[25rem] max-h-[30rem] rounded-3xl shadow-xl transition duration-500 hover:scale-105">
+                  <CardHeader floated={false} color="blue-gray">
+                    <div className="w-full h-56 bg-gray-200 rounded-md overflow-hidden bject-cover hover:opacity-75 lg:h-72 xl:h-80">
+                      <Link to={`/recipe/${rcp.id}`}>
+                        <img
+                          src={rcp.image}
+                          alt="Image not found"
+                          className="mb-3 w-full h-full object-center object-cover"
+                        />
+                      </Link>
+                    </div>
+                  </CardHeader>
+                  <CardBody>
+                    <div className=" flex items-center justify-between">
+                      <Typography
+                        variant="h5"
+                        color="blue-gray"
+                        className="font-medium"
+                      >
+                        {rcp.name}
+                      </Typography>
+                    </div>
+                    <Typography color="gray">
+                      <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-orange-100 text-orange-800">
+                        {rcp.cuisine}
+                      </span>
                     </Typography>
-                  </div>
-                  <Typography color="gray">
-                    <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-orange-100 text-orange-800">
-                      {rcp.cuisine}
-                    </span>
-                  </Typography>
-                </CardBody>
-                <CardFooter className="pt-3">
-                  <Link to={`/recipe/${rcp.id}`}>
-                    <Button
-                      fullWidth={true}
-                      className="bg-amber-300 text-gray-900"
-                    >
-                      Recipe Details
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-             
-            );
-          })}
+                  </CardBody>
+                  <CardFooter className="pt-3">
+                    <Link to={`/recipe/${rcp.id}`}>
+                      <Button
+                        fullWidth={true}
+                        className="bg-amber-300 text-gray-900"
+                      >
+                        Recipe Details
+                      </Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              );
+            })}
+          </AnimatePresence>
         </motion.div>
       </div>
       <Pagination
